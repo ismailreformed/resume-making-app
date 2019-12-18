@@ -1,13 +1,13 @@
 <template>
   <v-card class="overflow-hidden">
-    <v-app-bar
-      fixed=""
+    <v-app
+      fixed
       color="#FBFBFB"
       prominent
       fade-img-on-scroll
     >
       <v-container>
-        <v-layout>
+        <v-layout class="mx-5">
           <v-flex lg1>
             <v-avatar size="80">
               <img
@@ -20,81 +20,71 @@
             <h3>
               Jesam Smith
             </h3>
-            <h6 class="caption font-weight-thin">
+            <h6 class="caption">
               Professional UI/UX
             </h6>
-            <h6 class="overline font-weight-thin">
+            <h6 class="overline">
               Designer
             </h6>
           </v-flex>
           <v-flex lg9>
-            <v-card-title>
-              <v-chip
+            <v-card-title class="mt-2 pt-0">
+               <div
                 class="ma-2"
-                color="#fff"
               >
-                View interviews:
-              </v-chip>
+                <div class="text-center body-1">View interviews:</div>
+              </div>
               <v-spacer />
-
-              <v-chip
-                class="ma-2"
-                color="indigo darken-3"
-                outlined
-              >
-                <v-icon left color="blue">
-                  mdi-text-to-speech-off
-                </v-icon>
-                Audio & Text
-              </v-chip>
+              <v-btn class="ma-2 text-capitalize"  small outlined rounded color="primary">
+                  <v-icon left>mdi-text-to-speech-off</v-icon>  Audio & Text
+                </v-btn>
               <v-spacer />
-
-              <v-chip
-                class="ma-2"
-                color="indigo darken-3"
-                outlined
-              >
-                <v-icon left>
-                  mdi-youtube-tv
-                </v-icon>
-                Video
-              </v-chip>
+                <v-btn class="ma-2 text-capitalize" small rounded outlined color="primary">
+                  <v-icon left>mdi-youtube-tv</v-icon> Video
+                </v-btn>
               <v-spacer />
 
               <div
-                class="ma-2 text-xs-center"
+                class="ma-2"
               >
-                <p>$15</p>
-                <p>Hourly Rate</p>
+                <div class="text-center body-2">$15</div>
+                <div class="text-center body-2">Hourly Rate</div>
               </div>
               <v-spacer />
               <div
-                class="ma-2 text-xs-center"
+                class="ma-2"
               >
-                <p>10 hours</p>
-                <p>Weekly Availabilty</p>
+                <div class="text-center body-2">10 hours</div>
+                <div class="text-center body-2">Weekly Availabilty</div>
               </div>
               <v-spacer />
-              <v-btn rounded color="error">
-                Hire Me
+              <v-btn  rounded color="primary">
+                <span class="text-capitalize">Hire Me</span>  
               </v-btn>
             </v-card-title>
           </v-flex>
         </v-layout>
       </v-container>
+      <div>
+       <template>
+        <v-card>
+          <v-tabs
+            v-model="tab"
+            background-color="deep-purple accent-4"
+            centered
+            dark
+          >
+            <v-tabs-slider></v-tabs-slider>
 
-      <template v-slot:extension>
-        <v-tabs
-          class="blue"
-          align-with-title
-          background-color="#4771EA"
-        >
-          <v-tab>Tab 1</v-tab>
-          <v-tab>Tab 2</v-tab>
-          <v-tab>Tab 3</v-tab>
-        </v-tabs>
+            <v-tab v-for="tab in tabLists" :key="tab.id" :to="tab.link">
+              {{ tab.name}}
+            </v-tab>
+          </v-tabs>
+        </v-card>
       </template>
-    </v-app-bar>
+      </div>
+    </v-app>
+
     <!-- <v-sheet
       id="scrolling-techniques-4"
       class="overflow-y-auto"
@@ -104,3 +94,17 @@
     </v-sheet> -->
   </v-card>
 </template>
+
+<script>
+export default {
+  data(){
+    return{
+      tabLists: [
+        {id: 1, name: 'Education', link: '/'},
+        {id: 2, name: 'Website', link: '/'},
+        {id: 3, name: 'Skills', link: '/'}
+      ]
+    }
+  }
+}
+</script>
