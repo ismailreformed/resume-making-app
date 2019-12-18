@@ -1,117 +1,106 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+  <v-card class="overflow-hidden">
     <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
+      fixed=""
+      color="#FBFBFB"
+      prominent
+      fade-img-on-scroll
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        @click.stop="miniVariant = !miniVariant"
-        icon
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        @click.stop="clipped = !clipped"
-        icon
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        @click.stop="fixed = !fixed"
-        icon
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        @click.stop="rightDrawer = !rightDrawer"
-        icon
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
-    <v-content>
       <v-container>
-        <nuxt />
-      </v-container>
-    </v-content>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; 2019</span>
-    </v-footer>
-  </v-app>
-</template>
+        <v-layout>
+          <v-flex lg1>
+            <v-avatar size="80">
+              <img
+                src="https://cdn.vuetifyjs.com/images/john.jpg"
+                alt="John"
+              >
+            </v-avatar>
+          </v-flex>
+          <v-flex lg2 style="margin-top: 10px;">
+            <h3>
+              Jesam Smith
+            </h3>
+            <h6 class="caption font-weight-thin">
+              Professional UI/UX
+            </h6>
+            <h6 class="overline font-weight-thin">
+              Designer
+            </h6>
+          </v-flex>
+          <v-flex lg9>
+            <v-card-title>
+              <v-chip
+                class="ma-2"
+                color="#fff"
+              >
+                View interviews:
+              </v-chip>
+              <v-spacer />
 
-<script>
-export default {
-  data () {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
-    }
-  }
-}
-</script>
+              <v-chip
+                class="ma-2"
+                color="indigo darken-3"
+                outlined
+              >
+                <v-icon left color="blue">
+                  mdi-text-to-speech-off
+                </v-icon>
+                Audio & Text
+              </v-chip>
+              <v-spacer />
+
+              <v-chip
+                class="ma-2"
+                color="indigo darken-3"
+                outlined
+              >
+                <v-icon left>
+                  mdi-youtube-tv
+                </v-icon>
+                Video
+              </v-chip>
+              <v-spacer />
+
+              <div
+                class="ma-2 text-xs-center"
+              >
+                <p>$15</p>
+                <p>Hourly Rate</p>
+              </div>
+              <v-spacer />
+              <div
+                class="ma-2 text-xs-center"
+              >
+                <p>10 hours</p>
+                <p>Weekly Availabilty</p>
+              </div>
+              <v-spacer />
+              <v-btn rounded color="error">
+                Hire Me
+              </v-btn>
+            </v-card-title>
+          </v-flex>
+        </v-layout>
+      </v-container>
+
+      <template v-slot:extension>
+        <v-tabs
+          class="blue"
+          align-with-title
+          background-color="#4771EA"
+        >
+          <v-tab>Tab 1</v-tab>
+          <v-tab>Tab 2</v-tab>
+          <v-tab>Tab 3</v-tab>
+        </v-tabs>
+      </template>
+    </v-app-bar>
+    <!-- <v-sheet
+      id="scrolling-techniques-4"
+      class="overflow-y-auto"
+      max-height="600"
+    >
+      <v-container style="height: 1000px;" />
+    </v-sheet> -->
+  </v-card>
+</template>
