@@ -56,10 +56,10 @@
               <div
                 class="ma-2"
               >
-                <div class="text-center body-2">
+                <div class="text-center body-2 font-weight-bold">
                   $15
                 </div>
-                <div class="text-center body-2">
+                <div class="text-center body-2 font-weight-bold">
                   Hourly Rate
                 </div>
               </div>
@@ -67,10 +67,10 @@
               <div
                 class="ma-2"
               >
-                <div class="text-center body-2">
+                <div class="text-center body-2 font-weight-bold">
                   10 hours
                 </div>
-                <div class="text-center body-2">
+                <div class="text-center body-2 font-weight-bold">
                   Weekly Availabilty
                 </div>
               </div>
@@ -84,31 +84,25 @@
       </v-container>
       <div>
         <template>
-          <v-card>
+          <v-card flat>
             <v-tabs
-              v-model="tab"
-              background-color="deep-purple accent-4"
+              background-color="blue accent-4"
               centered
+              hide-slider
               dark
             >
-              <v-tabs-slider />
-
               <v-tab v-for="item in tabLists" :key="item.id" :to="item.link">
                 {{ item.name }}
               </v-tab>
+              
             </v-tabs>
           </v-card>
         </template>
+      <v-container>
+        <nuxt />
+      </v-container>
       </div>
     </v-app>
-
-    <!-- <v-sheet
-      id="scrolling-techniques-4"
-      class="overflow-y-auto"
-      max-height="600"
-    >
-      <v-container style="height: 1000px;" />
-    </v-sheet> -->
   </v-card>
 </template>
 
@@ -118,11 +112,20 @@ export default {
     return {
       tab: '',
       tabLists: [
-        { id: 1, name: 'Education', link: '/' },
-        { id: 2, name: 'Website', link: '/' },
-        { id: 3, name: 'Skills', link: '/' }
+        { id: 1, name: 'Portfolio', link: '/portfolio' },
+        { id: 2, name: 'Works', link: '/works' },
+        { id: 3, name: 'Education', link: '/education' }
       ]
     }
   }
 }
 </script>
+
+<style lang="stylus">
+.v-tab--active{
+  background-color: #5D82ED;
+  border-radius: 25px;
+  width: 80%
+}
+
+</style>

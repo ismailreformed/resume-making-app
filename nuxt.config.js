@@ -51,7 +51,10 @@ export default {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    'slick-carousel/slick/slick.css',
+    'slick-carousel/slick/slick-theme.css',
+  ],
   /*
   ** Plugins to load before mounting the App
   */
