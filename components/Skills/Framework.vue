@@ -13,7 +13,7 @@ export default {
   data(){
     return{
       skillPercentages:[
-        {id: 1, title: 'Ps', percentage: '85%' },
+        {id: 1, title: 'Ai', percentage: '85%' },
         {id: 2, title: 'Xd', percentage: '65%' },
         {id: 3, title: 'Ai', percentage: '95%' },
         {id: 4, title: 'In', percentage: '75%' },
@@ -40,7 +40,7 @@ li div{
   height: 100%;
 }
 .listDesign{
-  height:50px;
+  height:40px;
   width:100px;
   border-radius:25px;
   border-left: 1px solid #313450;

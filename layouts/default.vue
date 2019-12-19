@@ -99,6 +99,7 @@
           </v-card>
         </template>
       <v-container>
+        <SkillSet />
         <nuxt />
       </v-container>
       </div>
@@ -107,7 +108,11 @@
 </template>
 
 <script>
+import SkillSet from '@/components/Skills'
 export default {
+  components:{
+    SkillSet
+  },
   data () {
     return {
       tab: '',
@@ -121,7 +126,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style scoped>
 .v-tab--active{
   background-color: #5D82ED;
   border-radius: 25px;

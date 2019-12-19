@@ -40,7 +40,7 @@ li div{
   height: 100%;
 }
 .listDesign{
-  height:50px;
+  height:40px;
   width:100px;
   border-radius:25px;
   border-left: 1px solid #313450;
