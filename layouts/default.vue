@@ -91,7 +91,7 @@
               hide-slider
               dark
             >
-              <v-tab v-for="item in tabLists" :key="item.id" :to="item.link">
+              <v-tab v-for="item in tabLists" :key="item.id" :to="item.link" class="text-capitalize">
                 {{ item.name }}
               </v-tab>
               
@@ -126,6 +126,9 @@ export default {
   background-color: #5D82ED;
   border-radius: 25px;
   width: 80%
+}
+.width350{
+  width: 300px;
 }
 
 </style>

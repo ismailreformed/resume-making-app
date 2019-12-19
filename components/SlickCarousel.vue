@@ -1,30 +1,12 @@
 <template>
     <div>
         <slick ref="slick" :options="slickOptions" class="slickText">
-            <!-- <div v-for="(n,i) in data" :key="i">
-                    <template v-if="getUserImage(n)">
-                        <img :src="getUserImage(n)" class="slickImg"/>
-                    </template> -->
-            <div class="ma-1">
+            <div v-for="(item,i) in slickItems" :key="i" class="ma-1">
                 <template>
-                    <img src="@/assets/slider4.jpg" class="slickImg"/>
+                    <img :src="item.img" class="slickImg"/>
                 </template>
-                <p class="pa-0 ma-0 userName">asdfd asdfasd</p>
+                <p class="pa-0 ma-1 userName">{{ item.name }}</p>
             </div>
-            <div class="ma-1">
-                <template>
-                    <img src="@/assets/slider1.jpg" class="slickImg"/>
-                </template>
-                <p class="pa-0 ma-0 userName">asdfd asdfasd</p>
-            </div>
-            <div class="ma-1">
-                <template>
-                    <img src="@/assets/slider2.jpg" class="slickImg"/>
-                </template>
-                <p class="pa-0 ma-0 userName">asdfd asdfasd</p>
-            </div>
-   
-            <!-- </div> -->
         </slick>
     </div>
 </template>
@@ -32,12 +14,17 @@
 <script>
     import Slick from "vue-slick";
 
+    import slider1 from '@/assets/slider1.jpg'
+    import slider2 from '@/assets/slider2.jpg'
+    import slider3 from '@/assets/slider3.jpg'
+    import slider4 from '@/assets/slider4.jpg'
+    import slider5 from '@/assets/slider1.jpg'
+
     export default {
         name: "SlickCarouselNeighbours",
         components: {
             Slick
         },
-        props: ["data", "option"],
         data() {
             return {
                 slickOptions: {
@@ -63,20 +50,17 @@
                         },
                     ]
                 },
+
+                slickItems: [
+                    {id: 1, img: slider1, name: 'Slider One'},
+                    {id: 2, img: slider2, name: 'Slider Two'},
+                    {id: 3, img: slider3, name: 'Slider Three'},
+                    {id: 4, img: slider4, name: 'Slider Four'},
+                    {id: 5, img: slider5, name: 'Slider Five'}
+                ]
             }
         },
         methods: {
-            getUserImage(data) {
-                if (data && data.user && data.user.profilePic && data.user.profilePic.fileUrl) {
-                    if (data.user.profilePic.fileUrl.includes('txt')) {
-                        return false
-                    } else {
-                        return data.user.profilePic.fileUrl
-                    }
-                } else {
-                    return false
-                }
-            },
             next() {
                 this.$refs.slick.next();
             },
@@ -90,19 +74,7 @@
                 this.$nextTick(() => {
                     this.$refs.slick.reSlick();
                 });
-            },
-            getName(data) {
-                if (data) {
-                    const item = data.name.split(' ');
-                    if (item[0].length > 7) {
-                        return item[0].substr(0,5) + '...'
-                    }else {
-                        return item[0]
-                    }
-                } else {
-                    return 'Buildo User'
-                }
-            },
+            }
         }
     }
 </script>
@@ -119,7 +91,7 @@
 
     .userName {
         color: black;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold
     }
 
