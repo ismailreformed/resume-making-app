@@ -125,10 +125,10 @@ export default {
 .v-tab--active{
   background-color: #5D82ED;
   border-radius: 25px;
-  width: 80%
+  width: 200px;
 }
 .width350{
-  width: 300px;
+  max-width: 300px;
 }
 
 </style>
