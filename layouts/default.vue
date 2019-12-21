@@ -112,12 +112,10 @@
       </v-container>
     </div>
      <v-navigation-drawer
+     v-if="drawer"
       v-model="drawer"
-      right
       app
-      floating
-      persistent
-      width="268"
+      right
     >
       <v-list
         nav
