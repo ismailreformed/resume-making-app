@@ -2,36 +2,73 @@
   <v-card class="overflow-hidden">
     <v-app
       fixed
-      color="#FBFBFB"
+      color="#fff"
       prominent
-      fade-img-on-scroll
     >
-      <v-container>
-        <v-layout>
-          <v-flex lg1>
-            <v-avatar class="ml-4" size="80">
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+      right
+    >
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-title>Foo</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Bar</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Fizz</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Buzz</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+
+    <div style="background-color: white">
+      <v-container grid-list-xs class="hidden-xs-and-down">
+        <v-layout row wrap>
+          <v-flex lg1 xs4>
+            <v-avatar size="90">
               <img
                 src="https://cdn.vuetifyjs.com/images/john.jpg"
                 alt="John"
               >
             </v-avatar>
-            <v-btn class="ma-2" small rounded color="primary">
+            <v-btn class="my-2" small rounded color="primary">
               tap to chat
             </v-btn>
           </v-flex>
-          <v-flex lg2 class="mt-3 ml-2">
-            <h3>
-              Jesam Smith
-            </h3>
-            <h6 class="caption">
-              Professional UI/UX
-            </h6>
-            <h6 class="overline">
-              Designer
-            </h6>
+
+          <v-flex lg2 xs6 class="mt-3">
+            <div class="ml-2">
+              <h3>
+                Jesam Smith
+              </h3>
+              <h6 class="caption">
+                Professional UI/UX
+              </h6>
+              <h6 class="overline">
+                Designer
+              </h6>
+            </div>
           </v-flex>
-          <v-flex lg9>
-            <v-card-title class="mt-2 pt-0">
+          <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+          <v-flex lg9 class="hidden-sm-and-down mt-2">
+            <v-card-title class="mt-2 pt-0 ">
               <div
                 class="ma-2"
               >
@@ -82,27 +119,28 @@
           </v-flex>
         </v-layout>
       </v-container>
-      <div>
-        <template>
-          <v-card flat>
-            <v-tabs
-              background-color="blue accent-4"
-              centered
-              hide-slider
-              dark
-            >
-              <v-tab v-for="item in tabLists" :key="item.id" :to="item.link" class="text-capitalize">
-                {{ item.name }}
-              </v-tab>
-              
-            </v-tabs>
-          </v-card>
-        </template>
+    </div>
+  
+    <div>
+      <template>
+        <v-card flat>
+          <v-tabs
+            background-color="blue accent-4"
+            centered
+            hide-slider
+            dark
+          >
+            <v-tab v-for="item in tabLists" :key="item.id" :to="item.link" class="text-capitalize">
+              {{ item.name }}
+            </v-tab>
+          </v-tabs>
+        </v-card>
+      </template>
       <v-container>
         <SkillSet />
         <nuxt />
       </v-container>
-      </div>
+    </div>
     </v-app>
   </v-card>
 </template>
@@ -120,9 +158,16 @@ export default {
         { id: 1, name: 'Portfolio', link: '/portfolio' },
         { id: 2, name: 'Works', link: '/works' },
         { id: 3, name: 'Education', link: '/education' }
-      ]
+      ],
+      drawer: false,
+      group: null,
     }
-  }
+  },
+   watch: {
+      group () {
+        this.drawer = false
+      },
+    },
 }
 </script>
 
