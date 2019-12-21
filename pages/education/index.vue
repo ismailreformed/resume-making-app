@@ -7,7 +7,7 @@
     >
       <v-container grid-list-lg>
         <v-layout v-for="item in educationExperinceLists" :key="item.id" row wrap>
-          <v-flex xs6>
+          <v-flex xs12 lg6>
             <div class="borderLeft">
               <p class="headline font-weight-black text--primary  ml-3 width350">
                 {{ item.title }}
@@ -31,7 +31,7 @@ export default {
   data(){
     return {
       educationExperinceLists: [
-        {id: 1, title: '(BBA) Bachelor Degree of Computer Science', since: 'May 2018 - Present', text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dicta delectus et ratione, minus excepturi esse officia, quaerat quod, numquam optio quibusdam velit est accusantium voluptate necessitatibus? Excepturi exercitationem beatae nesciunt est velit illo tempore quo assumenda? Aliquid, maiores ad. Corporis velit sint nulla illum voluptates reiciendis. Quisquam, deserunt explicabo!'},
+        {id: 1, title: '(CSE) Bachelor Degree of Computer Science', since: 'May 2018 - Present', text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dicta delectus et ratione, minus excepturi esse officia, quaerat quod, numquam optio quibusdam velit est accusantium voluptate necessitatibus? Excepturi exercitationem beatae nesciunt est velit illo tempore quo assumenda? Aliquid, maiores ad. Corporis velit sint nulla illum voluptates reiciendis. Quisquam, deserunt explicabo!'},
         {id: 2, title: '(MBA) Master of Business Administration', since: 'May 2018 - Present', text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dicta delectus et ratione, minus excepturi esse officia, quaerat quod, numquam optio quibusdam velit est accusantium voluptate necessitatibus? Excepturi exercitationem beatae nesciunt est velit illo tempore quo assumenda? Aliquid, maiores ad. Corporis velit sint nulla illum voluptates reiciendis. Quisquam, deserunt explicabo!'},
       ]
     }

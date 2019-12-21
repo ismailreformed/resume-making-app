@@ -34,7 +34,7 @@
                             breakpoint: 1904,
                             settings: {
                                 slidesToShow: 3,
-                                slidesToScroll: 3,
+                                slidesToScroll: 2,
                                 infinite: true,
                                 dots: true
                             }
@@ -42,8 +42,17 @@
                         {
                             breakpoint: 1264,
                             settings: {
-                                slidesToShow: 3,
-                                slidesToScroll: 3,
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                                infinite: true,
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 960,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
                                 infinite: true,
                                 dots: true
                             }
@@ -86,7 +95,7 @@
 
     .slickImg {
         height: 400px;
-        width: 360px;
+        width: 375px;
     }
 
     .userName {

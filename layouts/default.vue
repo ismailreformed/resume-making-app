@@ -234,18 +234,22 @@
       </template>
       <v-container>
         <SkillSet />
+        <v-divider class="py-1"></v-divider>
         <nuxt />
       </v-container>
     </div>
+    <Footer />
     </v-app>
   </v-card>
 </template>
 
 <script>
 import SkillSet from '@/components/Skills'
+import Footer from '@/components/Footer'
 export default {
   components:{
-    SkillSet
+    SkillSet,
+    Footer
   },
   data () {
     return {

@@ -7,7 +7,7 @@
     >
       <v-container grid-list-lg>
         <v-layout v-for="item in workExperinceLists" :key="item.id" row wrap>
-          <v-flex xs6>
+          <v-flex xs12 lg6>
             <div class="borderLeft">
               <p class="headline font-weight-black text--primary ml-3 width350">
                 {{ item.title }}
