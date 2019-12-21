@@ -9,8 +9,8 @@
       flat
       tile
     >
-      <v-card-title class="blue">
-        <strong class="body-2 font-weight-black">Please, Get connected with me on social networks!</strong>
+      <v-card-title class="blue accent-4">
+        <strong class="title">Please, Get connected with me on social networks!</strong>
 
         <v-spacer></v-spacer>
 
