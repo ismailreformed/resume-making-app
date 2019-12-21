@@ -15,9 +15,39 @@
         nav
         dense
       >
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-title>
+              <v-layout>
+                <v-flex xs5>
+                  <v-avatar size="80">
+                    <img
+                      src="https://cdn.vuetifyjs.com/images/john.jpg"
+                      alt="John"
+                    >
+                  </v-avatar>
+                </v-flex>
+                <v-flex xs7 class="mt-3">
+                  <span class="body-1 font-weight-black">
+                    Jesam Smith
+                  </span>
+                  <br>
+                  <v-btn class="my-2" small rounded color="primary">
+                    tap to chat
+                  </v-btn>
+                </v-flex>
+              </v-layout>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+
         <v-subheader>
          View Interviews
         </v-subheader>
+
         <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4"
@@ -49,7 +79,9 @@
             </v-list-item-title>
           </v-list-item>
         </v-list-item-group>
+
         <v-divider ></v-divider>
+
         <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4"
@@ -104,19 +136,19 @@
     <div style="background-color: white">
       <v-container grid-list-xs class="hidden-xs-and-down">
         <v-layout row wrap>
-          <v-flex lg1 xs4>
+          <v-flex lg1 xs3>
             <v-avatar size="90">
               <img
                 src="https://cdn.vuetifyjs.com/images/john.jpg"
                 alt="John"
               >
             </v-avatar>
-            <v-btn class="my-2" small rounded color="primary">
+            <v-btn class="my-2 hidden-sm-and-down" small rounded color="primary">
               tap to chat
             </v-btn>
           </v-flex>
 
-          <v-flex lg2 xs6 class="mt-3">
+          <v-flex lg2 xs7 class="mt-3">
             <div class="ml-2">
               <h3>
                 Jesam Smith
@@ -238,7 +270,7 @@ export default {
 .v-tab--active{
   background-color: #5D82ED;
   border-radius: 25px;
-  width: 200px;
+  width: 100px;;
 }
 .width350{
   max-width: 300px;
