@@ -25,14 +25,14 @@
                 <v-flex xs5>
                   <v-avatar size="80">
                     <img
-                      src="https://cdn.vuetifyjs.com/images/john.jpg"
-                      alt="John"
+                      src="@/assets/resume_image.jpg"
+                      alt="Ismail"
                     >
                   </v-avatar>
                 </v-flex>
                 <v-flex xs7 class="mt-3">
                   <span class="body-1 font-weight-black">
-                    Jesam Smith
+                    Ismail Hossain
                   </span>
                   <br>
                   <v-btn class="my-2" small rounded color="primary">
@@ -139,8 +139,8 @@
           <v-flex lg1 xs3>
             <v-avatar size="90">
               <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-                alt="John"
+                src="@/assets/resume_image.jpg"
+                alt="Ismail"
               >
             </v-avatar>
             <v-btn class="my-2 hidden-sm-and-down" small rounded color="primary">
@@ -151,14 +151,15 @@
           <v-flex lg2 xs7 class="mt-3">
             <div class="ml-2">
               <h3>
-                Jesam Smith
+                Ismail Hossain
               </h3>
+              <h6 class="overline font-weight-black">
+                Software Engineer
+              </h6>
               <h6 class="caption">
-                Professional UI/UX
+                Laravel & Vue.js Developer
               </h6>
-              <h6 class="overline">
-                Designer
-              </h6>
+           
             </div>
           </v-flex>
           <v-app-bar-nav-icon class="hidden-sm-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>

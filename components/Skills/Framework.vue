@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="text-center">
-        <li class="listDesign ma-3" v-for="item in skillPercentages" :key="item.id">
+        <li class="listDesign ma-1" v-for="item in skillPercentages" :key="item.id">
           <div class="leftSideTag" >{{ item.title }}</div>
           <div class="white--text rightSideTag">{{ item.percentage }}</div>
         </li>
@@ -40,7 +40,7 @@ li div{
   height: 100%;
 }
 .listDesign{
-  height:40px;
+  height:35px;
   width:100px;
   border-radius:25px;
   border-left: 1px solid #313450;

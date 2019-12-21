@@ -3,19 +3,24 @@
     <v-card flat>
       <v-tabs
         v-model="tab"
-        centered
-        class="text-center"
+        class="text-center mt-1"
         background-color="#FBFBFB"
-        height="70"
+        height="60"
+        centered
         hide-slider
+        align-with-title
+        next-icon="mdi-arrow-right-bold-box-outline"
+        prev-icon="mdi-arrow-left-bold-box-outline"
+        show-arrows
+ 
       >        
         <v-tab href="#programming">
            Programming
         </v-tab>
-        <v-tab class="mx-3"  href="#framework">
-            Framework
+        <v-tab class="mx-1"  href="#framework">
+            Framework & Database
         </v-tab>
-        <v-tab class="mx-3"  href="#design-skills">
+        <v-tab class="mx-1"  href="#design-skills">
             Design Skills
         </v-tab>
         <v-tab  href="#software">
@@ -23,20 +28,22 @@
         </v-tab>
       </v-tabs>
 
-      <v-tabs-items v-model="tab" class="pt-5">
-        <v-tab-item value="design-skills">
-          <DesignSkills />
-        </v-tab-item>
-        <v-tab-item value="framework">
-          <Framework />
-        </v-tab-item>
-        <v-tab-item value="programming">
-          <Programming />
-        </v-tab-item>
-        <v-tab-item value="software">
-          <Software />
-        </v-tab-item>
-      </v-tabs-items>
+      <v-expand-transition>
+        <v-tabs-items v-model="tab" class="py-2">
+          <v-tab-item   class="fade-in" value="design-skills">
+            <DesignSkills />
+          </v-tab-item>
+          <v-tab-item  class="fade-in" value="framework">
+            <Framework />
+          </v-tab-item>
+          <v-tab-item  class="fade-in" value="programming">
+            <Programming />
+          </v-tab-item>
+          <v-tab-item  class="fade-in" value="software">
+            <Software />
+          </v-tab-item>
+        </v-tabs-items>
+      </v-expand-transition>
     </v-card>
   </div>
 </template>
@@ -81,8 +88,24 @@ height: 70px;;
   width: 20%;
 }
 .v-tab--active{
-  background-color: blanchedalmond;
+  background-color: white;
   border-radius: 25px;
-  width: 20%;
+  width: 130px;
+}
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 </style>
