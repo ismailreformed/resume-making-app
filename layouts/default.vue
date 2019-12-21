@@ -15,26 +15,89 @@
         nav
         dense
       >
+        <v-subheader>
+         View Interviews
+        </v-subheader>
         <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
           <v-list-item>
-            <v-list-item-title>Foo</v-list-item-title>
-          </v-list-item>
+             <v-list-tile-avatar>
+              <v-icon left color="primary">
+                mdi-text-to-speech-off
+              </v-icon> 
+            </v-list-tile-avatar>
 
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
+            <v-list-item-title>
+              <v-btn class=" text-capitalize" small block outlined rounded color="primary">
+                 Audio & Text
+              </v-btn>
+            </v-list-item-title>
           </v-list-item>
-
           <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
-          </v-list-item>
+             <v-list-tile-avatar>
+              <v-icon left color="primary">
+                mdi-youtube-tv
+              </v-icon>
+            </v-list-tile-avatar>
 
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
+            <v-list-item-title>
+              <v-btn class=" text-capitalize" small block outlined rounded color="primary">
+                 Video
+              </v-btn>
+            </v-list-item-title>
           </v-list-item>
         </v-list-item-group>
+        <v-divider ></v-divider>
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-title>
+              <div
+                class="ma-2"
+              >
+                <div class="text-center body-2 font-weight-bold">
+                  $15
+                </div>
+                <div class="text-center body-2 font-weight-bold">
+                  Hourly Rate
+                </div>
+              </div>
+            </v-list-item-title>
+          </v-list-item>
+          <v-divider ></v-divider>
+          <v-list-item>
+            <v-list-item-title>
+              <div
+                class="ma-2"
+              >
+                <div class="text-center body-2 font-weight-bold">
+                  10 hours
+                </div>
+                <div class="text-center body-2 font-weight-bold">
+                  Weekly Availabilty
+                </div>
+              </div>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+        <v-divider ></v-divider>
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-title>
+              <v-btn class="my-2" rounded block color="primary">
+                <span class="text-capitalize">Hire Me</span>
+              </v-btn>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+        <v-divider ></v-divider>
       </v-list>
     </v-navigation-drawer>
 
