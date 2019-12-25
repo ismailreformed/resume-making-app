@@ -6,6 +6,7 @@
       color="#FBFBFB"
     >
       <v-container grid-list-lg>
+
         <v-layout v-for="item in workExperinceLists" :key="item.id" row wrap>
           <v-flex xs12 lg6>
             <div class="borderLeft">
