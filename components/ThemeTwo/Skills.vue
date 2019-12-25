@@ -4,13 +4,12 @@
       <v-tabs
         v-model="tab"
         class="text-center mt-1"
-        background-color="#FBFBFB"
-        height="60"
+        background-color="white"
         centered
-        hide-slider
+        center-active
         align-with-title
-        next-icon="mdi-arrow-right-bold-box-outline"
-        prev-icon="mdi-arrow-left-bold-box-outline"
+        next-icon="mdi-chevron-right"
+        prev-icon="mdi-chevron-left"
         show-arrows
  
       >        
@@ -83,14 +82,10 @@ export default {
 height: 70px;;
 }
 .v-tab{
-  background-color: white;
-  border-radius: 25px;
-  width: 20%;
+  width: 100%;
 }
 .v-tab--active{
-  background-color: white;
-  border-radius: 25px;
-  width: 130px;
+  width: 100%;
 }
 .fade-in {
 	opacity: 1;

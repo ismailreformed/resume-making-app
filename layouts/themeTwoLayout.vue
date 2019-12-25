@@ -96,7 +96,7 @@
       </v-container>
     </div>
   
-    <div>
+    <div style="background-color: white">
       <template>
         <v-card flat>
           <v-tabs
