@@ -7,7 +7,7 @@
     >
 
     <div style="background-color: white">
-      <v-container grid-list-xs class="my-0 pt-0 pb-0">
+      <v-container grid-list-xs class="my-0 pt-0 pb-2">
         <v-layout  class="mt-4" row wrap>
           <v-flex lg1 xs3>
             <img
@@ -31,6 +31,7 @@
               </v-avatar>
             </div>
           </v-flex>
+          <v-spacer class="hidden-sm-and-up" />
           <v-flex xs1 class="hidden-sm-and-up pa-0 mt-5">
             <v-icon color="#0A56E9">
               mdi-text-to-speech-off
@@ -41,8 +42,8 @@
             </v-icon>
           </v-flex>
           <v-spacer></v-spacer>
-          <v-flex lg6 xs12>
-            <v-card-title class="my-0 py-0 hidden-sm-and-down">
+          <v-flex lg5 xs12>
+            <v-card-title class="ma-0 pa-0 hidden-sm-and-down">
               <div
                 class="ma-2"
               >
@@ -50,13 +51,15 @@
                   View interviews :
                 </h3>
               </div>
+              <v-spacer />
               <v-btn class="ma-2" color="#EEF6FF" style="box-shadow: none">
                 <v-icon left color="#0A56E9">
                   mdi-text-to-speech-off
                 </v-icon> 
                 <span style="color: #0A56E9">Audio & Text </span> 
               </v-btn>
-              <v-btn class="ma-2 " color="#EEF6FF" style="box-shadow: none">
+              <v-spacer />
+              <v-btn class="my-2 " color="#EEF6FF" style="box-shadow: none">
                 <v-icon color="#0A56E9" left>
                   mdi-youtube-tv
                 </v-icon> 
@@ -73,6 +76,7 @@
                     <span style="color: #2E81F4"> Hourly Rate</span>
                   </div>
                 </div>
+                <v-spacer />
                 <div
                   class="ma-2"
                 >
@@ -82,6 +86,7 @@
                     <span style="color: #2E81F4"> Weekly Availabilty</span>
                   </div>
                 </div>
+                <v-spacer />
                 <v-btn style="box-shadow: none" color="primary">
                   <span class="text-capitalize">Hire Me</span>
                 </v-btn>
