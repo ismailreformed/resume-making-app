@@ -1,9 +1,16 @@
 <template>
-  <div>
-    <ul class="text-center">
+  <div class="py-5" style="display: flex;
+  justify-content: center;">
+    <ul class="justify-content-center pa-0">
         <li class="listDesign ma-1" v-for="item in skillPercentages" :key="item.id">
-          <div class="leftSideTag" >{{ item.title }}</div>
-          <div class="white--text rightSideTag">{{ item.percentage }}</div>
+          <span style="color: #0A56E9;" >{{ item.title }}</span>
+          <br >
+          <div class="leftSideTag" >
+            <v-progress-linear :value="item.percentage"></v-progress-linear>
+          </div>
+          <div class="rightSideTag">
+            {{ item.percentage }}
+          </div>
         </li>
     </ul>
   </div>
@@ -13,7 +20,7 @@ export default {
   data(){
     return{
       skillPercentages:[
-        {id: 1, title: 'Ai', percentage: '85%' },
+        {id: 1, title: 'Ps', percentage: '85%' },
         {id: 2, title: 'Xd', percentage: '65%' },
         {id: 3, title: 'Ai', percentage: '95%' },
         {id: 4, title: 'In', percentage: '75%' },
@@ -30,30 +37,22 @@ ul {
 }
 
 li{
-  display: inline-block
+  display: inline-block;
+  text-align: start !important;
 }
 
 li div{
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
 }
 .listDesign{
-  height:35px;
-  width:100px;
-  border-radius:25px;
-  border-left: 1px solid #313450;
-  border-top:  1px solid #313450;
-  border-bottom:  1px solid #313450
+  width:150px;
 }
 .leftSideTag{
-  width:48%;
+  width:65%;
 }
 .rightSideTag{
-  width:47%;
-  background-color: #313450;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  width:28%;
+  color: #0A56E9
 }
+
 </style>
