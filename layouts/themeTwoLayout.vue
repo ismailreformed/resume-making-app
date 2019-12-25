@@ -244,7 +244,7 @@
 </template>
 
 <script>
-import SkillSet from '@/components/Skills'
+import SkillSet from '@/components/ThemeTwo/Skills'
 import Footer from '@/components/Footer'
 export default {
   name: 'themeTwoLayout',
@@ -256,9 +256,9 @@ export default {
     return {
       tab: '',
       tabLists: [
-        { id: 1, name: 'Portfolio', link: '/portfolio' },
-        { id: 2, name: 'Works', link: '/works' },
-        { id: 3, name: 'Education', link: '/education' }
+        { id: 1, name: 'Portfolio', link: '/theme-two/portfolio' },
+        { id: 2, name: 'Works', link: '/theme-two/works' },
+        { id: 3, name: 'Education', link: '/theme-two/education' }
       ],
       drawer: false,
       group: null,

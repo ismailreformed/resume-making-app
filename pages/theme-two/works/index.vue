@@ -29,6 +29,8 @@
 
 <script>
 export default {
+  name: 'themeTwo.vue',
+  layout: 'themeTwoLayout',
   data(){
     return {
       workExperinceLists: [

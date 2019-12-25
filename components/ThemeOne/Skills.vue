@@ -49,10 +49,10 @@
 </template>
 
 <script>
-import DesignSkills from '@/components/Skills/DesignSkills'
-import Framework from '@/components/Skills/Framework'
-import Programming from '@/components/Skills/Programming'
-import Software from '@/components/Skills/Software'
+import DesignSkills from '@/components/ThemeOne/Skills/DesignSkills'
+import Framework from '@/components/ThemeOne/Skills/Framework'
+import Programming from '@/components/ThemeOne/Skills/Programming'
+import Software from '@/components/ThemeOne/Skills/Software'
 
 export default {
   components:{

@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md>
     <v-layout wrap>
-      <v-flex v-for="item in themes" xs4>
+      <v-flex v-for="item in themes" :key="item.id" xs4>
         <v-card
         >
           <v-list-item>
@@ -49,6 +49,8 @@
 <script>
 
 export default {
+  name: "default",
+  layout: "default",
   data(){
     return {
       themes: [
