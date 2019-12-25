@@ -28,6 +28,8 @@
 
 <script>
 export default {
+  name: 'themeOne.vue',
+  layout: 'themeOneLayout',
   data(){
     return {
       educationExperinceLists: [

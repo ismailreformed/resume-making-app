@@ -7,6 +7,8 @@
 <script>
 import SlickCarousel from '@/components/SlickCarousel'
 export default {
+  name: 'themeOne.vue',
+  layout: 'themeOneLayout',
   components: {
     SlickCarousel
   }
