@@ -100,7 +100,7 @@
       <template>
         <v-card flat>
           <v-tabs
-            background-color="blue accent-4"
+            background-color="#EEF6FF"
             centered
             hide-slider
             dark
@@ -159,22 +159,18 @@ export default {
 
 <style scoped>
 .v-tab--active{
-  background-color: #5D82ED;
-  border-radius: 25px;
-  width: 100px;;
+  background-color: #0A56E9;
+  width: 100px;
+  font-weight: 700 ;
+  color: white
+}
+.theme--dark.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active){
+  color: #0A56E9;
+  font-weight: 700 
 }
 .width350{
   max-width: 300px;
 }
-
-ul {
-  list-style-type: none;
-}
-
-li{
-  display: inline-block
-}
-
 
 .listDesign{
   height: 40px;

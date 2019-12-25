@@ -77,7 +77,7 @@ export default {
 </script>
 <style scoped>
 .theme--light.v-tabs-items {
-    background-color: #FBFBFB;
+    background-color: #EEF6FF;
 }
 .v-item-group.theme--light.v-slide-group.v-tabs-bar{
 height: 70px;;
