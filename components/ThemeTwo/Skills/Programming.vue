@@ -1,7 +1,7 @@
 <template>
   <div class="py-5" style="display: flex;
   justify-content: center;">
-    <ul class="justify-content-center pa-0">
+    <ul class="pa-0">
         <li class="listDesign ma-1" v-for="item in skillPercentages" :key="item.id">
           <span style="color: #0A56E9;" >{{ item.title }}</span>
           <br >
