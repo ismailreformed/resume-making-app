@@ -113,7 +113,6 @@
       </template>
       <v-container>
         <SkillSet />
-        <v-divider class="py-1"></v-divider>
         <nuxt />
       </v-container>
     </div>

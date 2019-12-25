@@ -1,22 +1,22 @@
 <template>
   <div>
     <v-card
-      class="mx-auto"
-      flat
-      color="#FBFBFB"
+      style="box-shadow: none; border: 1px solid #0A56E9"
+      color="#FFFFFF"
     >
-      <v-container grid-list-lg>
-
+      <v-container grid-list-lg class="pa-5">
+        <h1 style="color: #0A56E9;" class="font-weigh-bold">Work</h1>
         <v-layout v-for="item in workExperinceLists" :key="item.id" row wrap>
-          <v-flex xs12 lg6>
-            <div class="borderLeft">
-              <p class="headline font-weight-black text--primary ml-3 width350">
-                {{ item.title }}
-              </p>
+          <v-flex xs12 lg12>
+            <div class="title font-weight-black" >
+              <div class="dot"></div> <span style="color:#0A56E9">{{ item.title }}</span>
             </div>
-            <div class="ml-5">
-              <p class="caption">{{ item.since }}</p>
-              <p class="body-2 text--primary">
+            <div class="ml-2">
+              <p class="ml-3">
+                <span class="body-2" style="color:#0A56E9">{{item.company }} || </span>
+               <span class="caption" style="color: black">{{ item.since }}</span> 
+              </p>
+              <p class=" ml-3 body-2" style="color: #2E81F4">
                 {{ item.text }}
               </p>
             </div>
@@ -34,8 +34,8 @@ export default {
   data(){
     return {
       workExperinceLists: [
-        {id: 1, title: 'Full-stack PHP developer Magictime-apps', since: 'May 2018 - Present', text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dicta delectus et ratione, minus excepturi esse officia, quaerat quod, numquam optio quibusdam velit est accusantium voluptate necessitatibus? Excepturi exercitationem beatae nesciunt est velit illo tempore quo assumenda? Aliquid, maiores ad. Corporis velit sint nulla illum voluptates reiciendis. Quisquam, deserunt explicabo!'},
-        {id: 2, title: 'Junior PHP developer Artorg IT (WeDo)', since: 'May 2018 - Present', text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dicta delectus et ratione, minus excepturi esse officia, quaerat quod, numquam optio quibusdam velit est accusantium voluptate necessitatibus? Excepturi exercitationem beatae nesciunt est velit illo tempore quo assumenda? Aliquid, maiores ad. Corporis velit sint nulla illum voluptates reiciendis. Quisquam, deserunt explicabo!'},
+        {id: 1, title: 'Full-stack PHP developer', company: ' Magictime-apps', since: 'May 2018 - Present', text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dicta delectus et ratione, minus excepturi esse officia, quaerat quod, numquam optio quibusdam velit est accusantium voluptate necessitatibus? Excepturi exercitationem beatae nesciunt est velit illo tempore quo assumenda? Aliquid, maiores ad. Corporis velit sint nulla illum voluptates reiciendis. Quisquam, deserunt explicabo!'},
+        {id: 2, title: 'Junior PHP developer', company: 'Artorg IT (WeDo)', since: 'May 2018 - Present', text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos dicta delectus et ratione, minus excepturi esse officia, quaerat quod, numquam optio quibusdam velit est accusantium voluptate necessitatibus? Excepturi exercitationem beatae nesciunt est velit illo tempore quo assumenda? Aliquid, maiores ad. Corporis velit sint nulla illum voluptates reiciendis. Quisquam, deserunt explicabo!'},
       ]
     }
   }
@@ -43,8 +43,12 @@ export default {
 </script>
 
 <style >
-.borderLeft{
-  border-left: 5px solid;
-  border-left-color: blue;
-  }
+.dot{
+  height: 15px;
+  width: 15px;
+  background-color: #0A56E9;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 5px;
+}
 </style>
