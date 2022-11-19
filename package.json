@@ -13,8 +13,8 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/vuetify": "^1.9.0",
-    "nuxt": "^2.0.0",
-    "resolve-url-loader": "^3.1.1",
+    "nuxt": "^2.15.8",
+    "resolve-url-loader": "^5.0.0",
     "vue-slick": "^1.1.15",
     "vuetify": "latest"
   },
